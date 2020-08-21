@@ -244,3 +244,7 @@ guide_continuous <-
                  label.position = 'left',
                  title.hjust = 0.5,
                  label.hjust = 0.5)
+
+##Palettes
+
+pal <- read_csv("https://raw.githubusercontent.com/asrenninger/palettes/master/grpurp.txt", col_names = FALSE) %>% pull(X1) 
