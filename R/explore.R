@@ -90,9 +90,10 @@ map <-
   tm_shape(background) +
   tm_polygons() + 
   tm_shape(points %>%
-           group_by(cluster) %>%
-           summarise(n = n()) %>%
-           st_convex_hull()) +
+             group_by(cluster) %>%
+             summarise(n = n()) %>%
+             st_convex_hull() %>%
+             st_buffer(500)) +
   tm_fill(col = "n", 
           pal = pal[5:9]) +
   tm_shape(tagged) +
