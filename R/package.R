@@ -15,6 +15,7 @@ library(tidycensus)
 ##
 
 library(sf)
+library(rmapshaper)
 library(tmap)
 library(tmaptools)
 
